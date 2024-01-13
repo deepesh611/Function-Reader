@@ -7,7 +7,7 @@ A very basic python program which displays all the functions from a module/libra
 
 In order to use this program, all you have to do is run the commands given below in powershell.
 
-```
+```bash
 git clone https://github.com/deepesh611/Function-Reader.git
 cd Function-Reader
 pip install subprocess.run thread
@@ -15,7 +15,7 @@ python3 setup.py
 ```
 
 Now you can run the main program
-```
+```bash
 python3 main.py
 ```
 
