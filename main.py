@@ -4,6 +4,7 @@
 # Importing the required modules
 import importlib
 import time
+import pyfiglet as fig
 from colorama import Fore, Style
 
 
@@ -28,12 +29,17 @@ def list_functions(module_name):
         print(Fore.GREEN + "======= END OF FUNCTION LIST =======\n" + Fore.RESET)
 
     except ModuleNotFoundError:
-        print(Fore.RED + '\nModule Not Found\nPlease Enter a Valid Module Name' + Fore.RESET)
+        print(Fore.RED + '\nModule Not Found\nPlease Enter a Valid Module Name and Make sure that you have Installed that Library.' + Fore.RESET)
+        
     except AttributeError:
         print(Fore.RED + '\nAttributeError: The given module does not contain any callable attributes.' + Fore.RESET)
 
 
 # Main Program
+
+for i in fig.figlet_format("FUNCTION - READER" ,font = 'big', width = 200).split('\n'):
+    print(Fore.LIGHTMAGENTA_EX + i.center(120) + Fore.GREEN)
+
 while True:
     module_name = input(Fore.LIGHTGREEN_EX + '\nEnter Module Name without Extension (if any):\n' + Fore.RESET)
 

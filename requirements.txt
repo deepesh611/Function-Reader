@@ -1,3 +1,11 @@
+#-----------------------------
+# APPLICATION DEPENDENCIES
+#-----------------------------
+
+setuptools
 colorama
 subprocess.run
 thread
+pyfiglet
+
+#-----------------------------
