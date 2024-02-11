@@ -35,6 +35,9 @@ def list_functions(module_name):
         print(Fore.RED + '\nAttributeError: The given module does not contain any callable attributes.' + Fore.RESET)
 
 
+
+
+
 # Main Program
 
 for i in fig.figlet_format("FUNCTION - READER" ,font = 'big', width = 200).split('\n'):
