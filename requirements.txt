@@ -7,5 +7,6 @@ colorama
 subprocess.run
 thread
 pyfiglet
+subprocess.run
 
 #-----------------------------

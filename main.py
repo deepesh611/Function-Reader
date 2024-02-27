@@ -2,10 +2,20 @@
 
 
 # Importing the required modules
-import importlib
 import time
+import importlib
+import subprocess
 import pyfiglet as fig
 from colorama import Fore, Style
+
+# TO RUN A COMMAND IN POWERSHELL
+def run_command(cmd):    
+    try:
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return result.returncode, result.stdout
+    except subprocess.CalledProcessError as e:
+        return e.returncode, e.stderr
+
 
 
 # Function to list all the functions of a module along with their docstrings
@@ -37,8 +47,9 @@ def list_functions(module_name):
 
 
 
-
 # Main Program
+
+base = "https://docs.python.org/3/library/"
 
 for i in fig.figlet_format("FUNCTION - READER" ,font = 'big', width = 200).split('\n'):
     print(Fore.LIGHTMAGENTA_EX + i.center(120) + Fore.GREEN)
@@ -50,7 +61,33 @@ while True:
         print(Fore.RED + 'Please Enter a Valid Module Name' + Fore.RESET)
     else:
         list_functions(module_name)
-
-    n = input('\nFind for More Modules? (y/n): ')                           # Asking if user wants to continue or quit
+        
+        if input("\nDo you want to see the Official Documentation of this Module? (y/n): ").lower() == 'y':        
+            command = base + module_name+ ".html#module-" + module_name
+            try:
+                try:
+                    print(Fore.LIGHTCYAN_EX + f"\nOpening the Official Documentation of {module_name} in the Browser..." + Fore.RESET)
+                    time.sleep(1)
+                    run_command(['start', command])
+                
+                except:
+                    try:
+                        command = base + module_name + ".html#module-_" + module_name
+                        run_command(['start', command])
+                    except:
+                        command = base + module_name + ".html#module-__" + module_name
+                        run_command(['start', command])
+                
+            except:
+                print (Fore.RED + "Failed to Open the Documentation in the Browser." + Fore.RESET)
+            
+        
+    n = input('\nFind for More Modules? (y/n): ')                         
     if n.lower() != 'y':
         break
+
+
+
+
+
+# abc.html#module-abc
