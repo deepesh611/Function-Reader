@@ -1,20 +1,20 @@
-#!/bin/bash
-
-# ANSI color codes
-green='\033[0;32m'
-yellow='\033[1;33m'
-reset='\033[0m' # Reset to default color
-
 # Start pip installation
 if pip install -r requirements.txt; then
     # Display completion message in green
-    echo -e "\n${green}Modules installed successfully.${reset}"
+    echo -e "\033[0;32m\nModules installed successfully.\033[0m"
+    
+    # Pause for 1 second
     sleep 1
-    # Prompt user to continue in yellow
-    echo -e "\n${yellow}Press Enter to continue...${reset} "
-    read
+    
+    # Display prompt message in yellow
+    echo -e "\033[0;33m\nPress Enter to continue... \033[0m"
+    
+    # Read user input
+    read -r
+    
 else
     # Display error message in red
-    echo -e "\n${red}Error: Failed to install modules. Please check the requirements file and try again.${reset}"
-    exit 1
+    echo -e "\033[0;31m\nFailed to install modules.\033[0m"
+    exit 1 # Exit with non-zero status to indicate failure
+
 fi
