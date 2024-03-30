@@ -1,25 +1,24 @@
-# Function-Reader
+# 📘 Function-Reader
 
-A very basic python program which displays all the functions from a module/library. In this project, users to go through all the available functions of a python module. This helps users to explore new ways to compress their code/program with new methods.
+A very simple Python program that displays all the functions from a module/library. In this project, users can explore all available functions of a Python module, aiding in discovering new ways to compress their code or enhance their program with new methods and also explore the official documentations of the module.
 
+## 🛠️ Installation
 
-## Installation
-
-In order to use this program, all you have to do is run the commands given below in powershell.
+To use this program, simply enter the commands below in Terminal:
 
 ```bash
 git clone https://github.com/deepesh611/Function-Reader.git
 cd Function-Reader
-pip install subprocess.run thread
-python3 setup.py
 ```
 
-Now you can run the main program
+
+Now you can run the setup file and the main program
 ```bash
-python3 main.py
+.\setup.sh
+python main.py
 ```
 
 
-## License
+## 📄 License
 
 This Repository is licenced under BSD 3-Clause License.

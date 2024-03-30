@@ -15,6 +15,6 @@ if pip install -r requirements.txt; then
 else
     # Display error message in red
     echo -e "\033[0;31m\nFailed to install modules.\033[0m"
-    exit 1 # Exit with non-zero status to indicate failure
+    exit 1                                                      # Exit with non-zero status to indicate failure
 
 fi
