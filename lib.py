@@ -21,6 +21,7 @@ def run_command(cmd):
 # Function to list all the functions of a module along with their docstrings
 def list_functions(module_name):
     try:
+        run_command(f'pip install {module_name}')                # Install the module if not already installed
         module = importlib.import_module(module_name)
         all_attributes = dir(module)
         functions_list = [attribute for attribute in all_attributes if callable(getattr(module, attribute))]

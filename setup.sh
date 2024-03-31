@@ -1,7 +1,7 @@
 # Start pip installation
 if pip install -r requirements.txt; then
     # Display completion message in green
-    echo -e "\033[0;32m\nModules installed successfully.\033[0m"
+    echo -e "\033[0;32m\nSetup Complete\033[0m"
     
     # Pause for 1 second
     sleep 1
