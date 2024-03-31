@@ -30,7 +30,7 @@ while True:
             print(Fore.RED + 'Please Enter a Valid Module Name' + Fore.RESET)
             
         else:
-            print(Fore.LIGHTYELLOW_EX + '\n  Loading...\n' + Fore.RESET)
+            print(Fore.LIGHTYELLOW_EX + '\n  Loading Functions...\n' + Fore.RESET)
             lib.list_functions(module_name)
     
     else: 
