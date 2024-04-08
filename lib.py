@@ -4,6 +4,7 @@ import time
 import requests
 import importlib
 import subprocess
+import webbrowser
 from colorama import Fore, Style
 
 
@@ -76,19 +77,23 @@ def view_docs(module_name):
             
             if validate_url(command1):
                 print(Fore.LIGHTCYAN_EX + f"\nOpening the Official Documentation of {module_name} in the Browser..." + Fore.RESET)
-                run_command(['start', command1])
+                # run_command(['start', command1])
+                webbrowser.open(command1)
             
             elif validate_url(command4):
                 print(Fore.LIGHTCYAN_EX + f"\nOpening the Official Documentation of {module_name} in the Browser..." + Fore.RESET)
-                run_command(['start', command4])
+                # run_command(['start', command4])
+                webbrowser.open(command4)
             
             elif validate_url(command2):
                 print(Fore.LIGHTCYAN_EX + f"\nOpening the Official Documentation of {module_name} in the Browser..." + Fore.RESET)
-                run_command(['start', command2])
+                # run_command(['start', command2])
+                webbrowser.open(command2)
             
             elif validate_url(command3):
                 print(Fore.LIGHTCYAN_EX + f"\nOpening the Official Documentation of {module_name} in the Browser..." + Fore.RESET)
-                run_command(['start', command3])
+                # run_command(['start', command3])
+                webbrowser.open(command3)
             
             else:
                 print(Fore.RED + "Failed to Open the Documentation in the Browser." + Fore.RESET)

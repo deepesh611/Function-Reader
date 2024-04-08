@@ -1,20 +1,41 @@
+#!/bin/bash
+
+# Check if Python is installed
+if ! command -v python3 &>/dev/null; then
+    echo -e "\033[0;36mPython3\033[0;31m is not installed.\033[0m"   # Display error message in red
+    exit 1
+else
+    python3 --version
+    echo ""
+fi
+
+
+# Check if pip is installed
+if ! command -v pip &>/dev/null; then
+    echo -e "\033[0;36mpip\033[0;31m is not installed.\033[0m"       # Display error message in red
+    exit 1
+else
+    pip --version
+    echo ""
+fi
+
+
 # Start pip installation
 if pip install -r requirements.txt; then
     # Display completion message in green
     echo -e "\033[0;32m\nSetup Complete\033[0m"
     
-    # Pause for 1 second
-    sleep 1
-    
-    # Display prompt message in yellow
-    echo -e "\033[0;33m\nPress Enter to continue... \033[0m"
-    
-    # Read user input
-    read -r
-    
 else
     # Display error message in red
     echo -e "\033[0;31m\nFailed to install modules.\033[0m"
-    exit 1                                                      # Exit with non-zero status to indicate failure
-
+    # exit 1                                                      # Exit with non-zero status to indicate failure
 fi
+
+# Pause for 1 second
+sleep 1
+    
+# Display prompt message in yellow
+echo -e "\033[0;36m\nPress Enter to continue... \033[0m"
+    
+# Read user input
+read -r
