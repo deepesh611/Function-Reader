@@ -1,0 +1,12 @@
+#-----------------------------
+# APPLICATION DEPENDENCIES
+#-----------------------------
+
+thread
+colorama
+pyfiglet
+requests
+setuptools
+subprocess.run
+
+#-----------------------------
