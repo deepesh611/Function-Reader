@@ -1,4 +1,6 @@
+
 #!/bin/bash
+
 
 # Check if Python is installed
 if ! command -v python3 &>/dev/null; then
@@ -22,6 +24,9 @@ else
     pip --version
     echo ""
 fi
+
+
+cd ./src
 
 
 # Start pip installation
