@@ -26,4 +26,4 @@ python main.py
 
 ## 📄 License
 
-This Repository is licenced under BSD 3-Clause License.
+This Repository is licensed under MIT License.
