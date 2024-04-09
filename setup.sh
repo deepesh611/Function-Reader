@@ -5,7 +5,11 @@ if ! command -v python3 &>/dev/null; then
     echo -e "\033[0;36mPython3\033[0;31m is not installed.\033[0m"   # Display error message in red
     exit 1
 else
-    python3 --version
+    if ! python --version &>/dev/null; then
+        python3 --version
+    else
+        python --version
+    fi
     echo ""
 fi
 
