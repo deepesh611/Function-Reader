@@ -2,7 +2,7 @@
 
 
 # Importing the required modules
-import src.lib as lib
+import lib
 import time
 import pyfiglet as fig
 from colorama import Fore, Style
@@ -24,15 +24,13 @@ time.sleep(1)
 while True:
     module_name = input(Fore.LIGHTGREEN_EX + '\nEnter Module Name without Extension (if any):\n' + Fore.RESET)
 
-    if module_name.lower() != 'q':
-        
+    if module_name.lower() == 'q' or module_name.lower() == 'quit':
+        quit()
+    
+    else: 
         if not module_name:
             print(Fore.RED + 'Please Enter a Valid Module Name' + Fore.RESET)
             
         else:
             print(Fore.LIGHTYELLOW_EX + '\n  Loading Functions...\n' + Fore.RESET)
             lib.list_functions(module_name)
-    
-    else: 
-        print()
-        quit()

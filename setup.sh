@@ -44,7 +44,7 @@ fi
 sleep 1
     
 # Display prompt message in yellow
-echo -e "\033[0;36m\nPress Enter to continue... \033[0m"
+echo -e "\033[0;35m\nPress Enter to continue... \033[0m"
     
 # Read user input
 read -r
