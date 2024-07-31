@@ -9,6 +9,9 @@ A simple Python program that displays all the functions from a module/library. I
 
 ## 🛠️ Installation
 
+> [!NOTE]
+>  Make sure that you have installed `bash` or `Git-Bash` before proceeding.
+
 To use this program, enter the commands below in Terminal:
 
 ```bash
@@ -17,12 +20,23 @@ cd Function-Reader
 ```
 
 
-Now you can run the setup file and the main program
+Now you can run the setup file
 ```bash
 .\setup.sh
-python main.py
 ```
 
+To run the main program, there are two ways:
+- Using `python` command
+  
+```bash
+./Function-Reader.sh
+```
+- Running the Shell File (If bash is set in your system)
+
+```bash
+cd ./src
+python ./main.py
+```
 
 ## 📄 License
 
