@@ -27,12 +27,13 @@ Now you can run the setup file
 ```
 
 To run the main program, there are two ways:
-- Using `python` command
+- Running the Shell File (If bash is set in your system)
   
 ```bash
 ./Function-Reader.sh
 ```
-- Running the Shell File (If bash is set in your system)
+
+- Using `python` command
 
 ```bash
 cd ./src

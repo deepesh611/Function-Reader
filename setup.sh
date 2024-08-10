@@ -25,7 +25,16 @@ else
 fi
 
 
-cd ./src
+# Create a Virtual Environment
+if ! python3 -m venv venv; then
+    echo -e "\033[0;31mFailed to create a virtual environment.\033[0m"  # Display error message in red
+    exit 1
+else
+    echo -e "\033[0;32mVirtual environment created successfully.\033[0m"  # Display completion message in green
+fi
+
+
+cd ./src || echo -e "\033[0;31m'./src' Not Found!\033[0m"
 
 
 # Start pip installation
