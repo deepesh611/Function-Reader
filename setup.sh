@@ -34,7 +34,7 @@ else
 fi
 
 
-cd ./src || echo -e "\033[0;31m'./src' Not Found!\033[0m"
+cd ./src
 
 
 # Start pip installation
