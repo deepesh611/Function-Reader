@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Activate Virtual Environment
-env\\Scripts\\activate
+venv\\Scripts\\activate
 
 # Change directory to src
 cd ./src || return 1

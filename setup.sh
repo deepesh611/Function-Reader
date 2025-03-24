@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Check if Python is installed
 if ! command -v python3 &>/dev/null; then
     echo -e "\033[0;36mPython3\033[0;31m is not installed.\033[0m"   # Display error message in red
